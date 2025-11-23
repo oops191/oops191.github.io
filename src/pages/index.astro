@@ -1,0 +1,46 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { Icon } from "astro-icon/components";
+import { Code } from "astro-expressive-code/components";
+import MainCard from "@/components/MainCard.astro";
+import FeatureCard from "@/components/mdx/FeatureCard.astro";
+import GitHubStats from "@/components/mdx/GitHubStats.astro";
+---
+
+<BaseLayout title="Home">
+  <MainCard title="" description="" textOverlay="" infoIcon="lucide:info">
+    <div class="space-y-8">
+      <!-- Hero Section -->
+      <section class="py-6">
+        <div class="flex flex-col items-center text-center">
+          <h1
+            class="text-4xl font-bold mb-4 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent leading-loose"
+          >
+            🌟 oops19
+          </h1>
+          <p class="text-xl text-base-content/80 max-w-3xl mb-8"></p>
+          <div class="flex flex-wrap gap-4 justify-center">
+            <a href="/blog" class="btn btn-primary gap-2 btn-shine-effect">
+              <Icon name="lucide:book-open" class="w-5 h-5" />
+              <span>Explore Blog</span>
+            </a>
+            <a href="https://github.com/EveSunMaple/Frosti" target="_blank" class="btn btn-outline gap-2">
+              <Icon name="lucide:github" class="w-5 h-5" />
+              <span>Star on GitHub</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- GitHub Stats -->
+      <section>
+        <h2 class="text-2xl font-bold mb-6 flex items-center gap-2">
+          <Icon name="lucide:github" class="w-6 h-6 text-primary" />
+          <span>GitHub Statistics</span>
+        </h2>
+
+        <GitHubStats username="oops191" showLanguages={false} showCommitGraph={true} />
+      </section>
+    </div>
+  </MainCard>
+</BaseLayout>
